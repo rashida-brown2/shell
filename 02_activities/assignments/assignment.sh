@@ -56,7 +56,7 @@ destinationFolder="../../processed/server_logs"
 cd "$sourceFolder"/
 pwd
 
-mv *server*.log "$destinationFolder"/
+cp *server*.log "$destinationFolder"/
 pwd
 
 # 6. Repeat the above step for user logs and event logs
@@ -66,7 +66,7 @@ destinationFolder="../../processed/user_logs"
 
 pwd
 
-mv *user*.log "$destinationFolder"/
+cp *user*.log "$destinationFolder"/
 
 
 #event logs
