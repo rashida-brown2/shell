@@ -34,7 +34,7 @@ cd data
 # 2. Move the ./rawdata directory to ./data/raw
 mkdir raw
 cd ..
-mv rawdata/*  data/raw
+mv rawdata/  data/raw
 
 # 3. List the contents of the ./data/raw directory
 echo "Listing contents of raw directory"
@@ -48,10 +48,10 @@ mkdir -p processed/server_logs processed/user_logs processed/event_logs
 
 # 5. Copy all server log files (files with "server" in the name AND a .log extension) from ./data/raw to ./data/processed/server_logs
 # Define search parameters
-sourceFolder="raw"
+sourceFolder="raw/rawdata"
 
 #server logs
-destinationFolder="../processed/server_logs"
+destinationFolder="../../processed/server_logs"
 
 cd "$sourceFolder"/
 pwd
@@ -62,7 +62,7 @@ pwd
 # 6. Repeat the above step for user logs and event logs
 
 #user logs
-destinationFolder="../processed/user_logs"
+destinationFolder="../../processed/user_logs"
 
 pwd
 
@@ -70,7 +70,7 @@ mv *user*.log "$destinationFolder"/
 
 
 #event logs
-destinationFolder="../processed/event_logs"
+destinationFolder="../../processed/event_logs"
 
 pwd
 
@@ -83,7 +83,7 @@ pwd
 rm -rf *ipaddr*
 
 pwd
-rm -rf ../processed/user_logs/*ipaddr*
+rm -rf ../../processed/user_logs/*ipaddr*
 
 # 8. Create a file named ./data/inventory.txt that lists all the files in the subfolders of ./data/processed
 
