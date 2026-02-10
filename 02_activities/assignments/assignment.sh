@@ -74,7 +74,7 @@ destinationFolder="../../processed/event_logs"
 
 pwd
 
-mv *event*.log "$destinationFolder"/
+cp *event*.log "$destinationFolder"/
 
 
 # 7. For user privacy, remove all files containing IP addresses (files with "ipaddr" in the filename) from ./data/raw and ./data/processed/user_logs
